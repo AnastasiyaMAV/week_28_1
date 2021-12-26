@@ -9,29 +9,25 @@ let masTariffJSON = [{
   "price":"300 руб/мес",
   "colorBg":"unlimited_300",
   "speed":"до 10 Мбит/сек",
-  "details":"Объем включенного трафика не ограничен",
-  "isSelected":false
+  "details":"Объем включенного трафика не ограничен"
 },{
   "title":"Безлимитный 450",
   "price":"450 руб/мес",
   "colorBg":"unlimited_450",
   "speed":"до 50 Мбит/сек",
-  "details":"Объем включенного трафика не ограничен",
-  "isSelected":false
+  "details":"Объем включенного трафика не ограничен"
 },{
   "title":"Безлимитный 550",
   "price":"550 руб/мес",
   "colorBg":"unlimited_550",
   "speed":"до 100 Мбит/сек",
-  "details":"Объем включенного трафика не ограничен",
-  "isSelected":true
+  "details":"Объем включенного трафика не ограничен"
 },{
   "title":"Безлимитный 1000",
   "price":"1000 руб/мес",
   "colorBg":"unlimited_1000",
   "speed":"до 200 Мбит/сек",
-  "details":"Объем включенного трафика не ограничен",
-  "isSelected":false
+  "details":"Объем включенного трафика не ограничен"
 }]
 
 function CardList() {
@@ -40,9 +36,7 @@ function CardList() {
         <div className="site-card-wrapper">
           <Row>
             {
-              masTariffJSON.map((masTariff) => 
-              <CardTariff title={masTariff.title} price={masTariff.price} colorBg={masTariff.colorBg}
-              speed={masTariff.speed} details={masTariff.details} isSelected={masTariff.isSelected} />)
+              masTariffJSON.map((masTariff) => <CardTariff {...masTariff} />)
             }
           </Row>
         </div>
